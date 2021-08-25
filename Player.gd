@@ -34,6 +34,7 @@ onready var anim_player = $AnimationPlayer
 
 
 func _ready():
+	#bbodsbosdbjsldbjk
 	jump_velocity2 = jump_velocity
 	gravity_normal = gravity
 	move_speed_normal = move_speed
