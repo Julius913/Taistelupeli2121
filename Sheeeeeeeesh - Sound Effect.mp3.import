@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sheeeeeeeesh - Sound Effect.mp3-05cf6e85e74b8b3bac624855e6dcdbe4.mp3str"
+
+[deps]
+
+source_file="res://Sheeeeeeeesh - Sound Effect.mp3"
+dest_files=[ "res://.import/Sheeeeeeeesh - Sound Effect.mp3-05cf6e85e74b8b3bac624855e6dcdbe4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

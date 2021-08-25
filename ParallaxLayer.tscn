@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://lava_land_background.png" type="Texture" id=1]
+
+[node name="ParallaxLayer" type="ParallaxLayer"]
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 1024, 1390 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.457943, 0.457943, 0.457943, 1 )
+position = Vector2( 410.247, -230.305 )
+scale = Vector2( 1.46558, 1 )
+texture = ExtResource( 1 )

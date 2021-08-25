@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/epic_manumanu_music.wav-8a4d5aaffd8b18a72aa83b45c7082747.sample"
+
+[deps]
+
+source_file="res://music/epic_manumanu_music.wav"
+dest_files=[ "res://.import/epic_manumanu_music.wav-8a4d5aaffd8b18a72aa83b45c7082747.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
