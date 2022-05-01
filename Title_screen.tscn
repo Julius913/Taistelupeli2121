@@ -1,0 +1,551 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://fonts/advanced_pixel-7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Title_screen.gd" type="Script" id=2]
+[ext_resource path="res://Pixilart Sprite Sheet starry sky.png" type="Texture" id=3]
+[ext_resource path="res://ParallaxLayer.gd" type="Script" id=4]
+[ext_resource path="res://shadown.png" type="Texture" id=5]
+[ext_resource path="res://ParallaxLayer2.gd" type="Script" id=6]
+[ext_resource path="res://Pixilart Sprite Sheet (3).png" type="Texture" id=8]
+[ext_resource path="res://ParallaxLayer3.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 116
+outline_color = Color( 1, 0.607843, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("VBoxContainer/LOGO:custom_fonts/font:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("VBoxContainer/LOGO:custom_fonts/font:outline_color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("VBoxContainer/LOGO:custom_fonts/font:outline_color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.607843, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("VBoxContainer/LOGO:custom_fonts/font:outline_color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("VBoxContainer/LOGO:custom_fonts/font:outline_color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("VBoxContainer/LOGO:custom_constants/shadow_offset_x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("VBoxContainer/LOGO:custom_constants/shadow_offset_y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "color_change"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer/LOGO:custom_colors/font_color_shadow")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0.537255, 0, 1 ), Color( 1, 0.960784, 0, 1 ), Color( 0.0352941, 1, 0, 1 ), Color( 0, 1, 1, 1 ), Color( 0.0470588, 0, 1, 1 ), Color( 0.917647, 0, 1, 1 ), Color( 1, 0, 0, 1 ) ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("VBoxContainer/LOGO:custom_constants/shadow_offset_x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("VBoxContainer/LOGO:custom_constants/shadow_offset_y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "effect_1"
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("VBoxContainer/LOGO:custom_fonts/font:outline_color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("VBoxContainer/LOGO:custom_fonts/font:outline_color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("VBoxContainer/LOGO:custom_fonts/font:outline_color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("VBoxContainer/LOGO:custom_fonts/font:outline_color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("VBoxContainer/LOGO:custom_fonts/font:outline_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath(".:color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "fade_in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:color:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:color:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:color:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath(".:color:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "fade_out"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParallaxLayer/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ParallaxLayer3/Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "color_change"
+length = 60.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParallaxLayer/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5.5, 17.9, 24.6, 30.1, 38.3, 46, 54, 59.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 0.0784314, 1, 0, 1 ), Color( 0.0784314, 1, 0, 1 ), Color( 0.00784314, 0, 1, 1 ), Color( 0.00784314, 0, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Title_screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = 100.0
+margin_right = -100.0
+margin_bottom = -100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LOGO" type="Label" parent="VBoxContainer"]
+margin_right = 1080.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 0, 600 )
+custom_colors/font_color_shadow = Color( 0.800071, 0.968911, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 0
+custom_fonts/font = SubResource( 1 )
+text = "FIGHTING GAME 2021"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/LOGO"]
+root_node = NodePath("../../..")
+autoplay = "color_change"
+anims/RESET = SubResource( 5 )
+anims/color_change = SubResource( 6 )
+anims/effect_1 = SubResource( 8 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 604.0
+margin_right = 1080.0
+margin_bottom = 912.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 1080.0
+margin_bottom = 308.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="START" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 1080.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Start game"
+flat = true
+align = 0
+
+[node name="OPTIONS" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 104.0
+margin_right = 1080.0
+margin_bottom = 204.0
+rect_min_size = Vector2( 0, 100 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Test World"
+flat = true
+align = 0
+
+[node name="QUIT" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 208.0
+margin_right = 1080.0
+margin_bottom = 308.0
+rect_min_size = Vector2( 0, 100 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Quit"
+flat = true
+align = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+autoplay = "fade_in"
+anims/RESET = SubResource( 9 )
+anims/fade_in = SubResource( 10 )
+anims/fade_out = SubResource( 11 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+follow_viewport_enable = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2( 4970, 0 )
+script = ExtResource( 4 )
+speed = -1.0
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1694.13, 542.417 )
+rotation = 1.5708
+scale = Vector2( 0.092507, 9.94451 )
+texture = ExtResource( 3 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2( 4970, 0 )
+script = ExtResource( 6 )
+speed = -1.0
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 4160, 544 )
+scale = Vector2( 3, 2.18 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2( 5600, 0 )
+script = ExtResource( 9 )
+speed = -3.0
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 1896, 766 )
+texture = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/ParallaxBackground"]
+autoplay = "color_change"
+playback_speed = 1.5
+anims/RESET = SubResource( 12 )
+anims/color_change = SubResource( 13 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 964, 538 )
+zoom = Vector2( 1.5, 1.5 )
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/START" to="." method="_on_START_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/OPTIONS" to="." method="_on_OPTIONS_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/QUIT" to="." method="_on_QUIT_pressed"]
+[connection signal="animation_finished" from="ColorRect/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

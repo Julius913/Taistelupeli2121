@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/taistelupeli_hit_sound_new.wav-ee1393cb2b9ee0819e886037fcce2cbf.sample"
+
+[deps]
+
+source_file="res://taistelupeli_hit_sound_new.wav"
+dest_files=[ "res://.import/taistelupeli_hit_sound_new.wav-ee1393cb2b9ee0819e886037fcce2cbf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

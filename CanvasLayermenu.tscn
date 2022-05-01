@@ -1,0 +1,94 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://ParallaxLayer2.gd" type="Script" id=1]
+[ext_resource path="res://ParallaxLayer.gd" type="Script" id=2]
+[ext_resource path="res://ParallaxLayer3.gd" type="Script" id=3]
+[ext_resource path="res://Pixilart Sprite Sheet starry sky.png" type="Texture" id=4]
+[ext_resource path="res://Pixilart Sprite Sheet (3).png" type="Texture" id=5]
+[ext_resource path="res://shadown.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParallaxLayer/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ParallaxLayer3/Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "color_change"
+length = 60.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParallaxLayer/Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5.5, 17.9, 24.6, 30.1, 38.3, 46, 54, 59.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 0.0784314, 1, 0, 1 ), Color( 0.0784314, 1, 0, 1 ), Color( 0.00784314, 0, 1, 1 ), Color( 0.00784314, 0, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = -1
+follow_viewport_enable = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 4970, 0 )
+script = ExtResource( 2 )
+speed = -1.0
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1694.13, 542.417 )
+rotation = 1.5708
+scale = Vector2( 0.092507, 9.94451 )
+texture = ExtResource( 4 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 4970, 0 )
+script = ExtResource( 1 )
+speed = -1.0
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 4160, 544 )
+scale = Vector2( 3, 2.18 )
+texture = ExtResource( 6 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 5600, 0 )
+script = ExtResource( 3 )
+speed = -3.0
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 1896, 766 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground"]
+autoplay = "color_change"
+playback_speed = 1.5
+anims/RESET = SubResource( 12 )
+anims/color_change = SubResource( 13 )

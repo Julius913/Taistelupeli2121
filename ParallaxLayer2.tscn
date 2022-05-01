@@ -10,5 +10,5 @@ motion_mirroring = Vector2( 1024, 1390 )
 modulate = Color( 0.457943, 0.457943, 0.457943, 1 )
 position = Vector2( 410.247, 465 )
 rotation = 3.14159
-scale = Vector2( 1.46558, 1 )
+scale = Vector2( 2, 1 )
 texture = ExtResource( 1 )

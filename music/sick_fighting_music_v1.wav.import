@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sick_fighting_music_v1.wav-c7264d5ddc9f4583f3205e590e35fe1f.sample"
+
+[deps]
+
+source_file="res://music/sick_fighting_music_v1.wav"
+dest_files=[ "res://.import/sick_fighting_music_v1.wav-c7264d5ddc9f4583f3205e590e35fe1f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

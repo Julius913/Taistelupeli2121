@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://hitbox_test.gd" type="Script" id=1]
 
@@ -17,11 +17,42 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 3.675, 3.825, 4 ),
+"times": PoolRealArray( 0.075, 0.2, 1.225 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, true ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Particles2D:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 0.35 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.242588, 0.423181, 0.71159, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 0.858491, 0.433962, 1, 1, 0.532982, 0, 1, 1, 0.164063, 0, 1, 1, 0.141176, 0, 0 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 200.0
+initial_velocity_random = 0.98
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 6.0
+color_ramp = SubResource( 4 )
 
 [node name="hitbox_test" type="Area2D" groups=[
 "hit_box",
@@ -33,11 +64,16 @@ script = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 0.8, 0.72 )
 shape = SubResource( 1 )
-disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "hitter"
 anims/hitter = SubResource( 2 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+emitting = false
+amount = 500
+explosiveness = 1.0
+process_material = SubResource( 5 )
 
 [connection signal="area_entered" from="." to="." method="_on_hitbox_test_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_hitbox_test_body_entered"]

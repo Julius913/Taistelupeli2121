@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.622222, 1 )
+colors = PoolColorArray( 0.486275, 0.486275, 0.486275, 1, 0.486275, 0.486275, 0.486275, 1, 0.515137, 0.515137, 0.515137, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+flag_disable_z = true
+gravity = Vector3( 0, -30, 0 )
+initial_velocity = 75.0
+initial_velocity_random = 0.5
+angular_velocity = 46.93
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+tangential_accel = 0.18
+tangential_accel_random = 1.0
+angle = 45.0
+angle_random = 1.0
+scale = 3.0
+scale_random = 1.0
+color_ramp = SubResource( 2 )
+
+[node name="SMOKE" type="Particles2D"]
+position = Vector2( 31, -3 )
+emitting = false
+amount = 60
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 3 )

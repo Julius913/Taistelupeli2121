@@ -1,20 +1,33 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://ENERGY.gd" type="Script" id=1]
 [ext_resource path="res://TextureProgress2.gd" type="Script" id=2]
-[ext_resource path="res://TOP_BAR.gd" type="Script" id=3]
-[ext_resource path="res://energy_bar.png" type="Texture" id=4]
+[ext_resource path="res://new_energy_bar no color.png" type="Texture" id=3]
+[ext_resource path="res://new_energy_bar.png" type="Texture" id=4]
 [ext_resource path="res://health_bar_new.png" type="Texture" id=5]
 [ext_resource path="res://LAGTIME.gd" type="Script" id=6]
+[ext_resource path="res://flash.png" type="Texture" id=7]
+[ext_resource path="res://health_icon2.png" type="Texture" id=8]
+[ext_resource path="res://lag_time_icon_no_light.png" type="Texture" id=9]
+[ext_resource path="res://PLAYER1.gd" type="Script" id=10]
 
-[node name="TOP_BAR" type="CanvasLayer"]
-layer = 2
-script = ExtResource( 3 )
+[node name="TOP_BAR" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="TextureProgress" type="TextureProgress" parent="."]
-margin_top = 1.0
-margin_right = 300.0
-margin_bottom = 51.0
+[node name="PLAYER1" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="health_bar2" type="TextureProgress" parent="PLAYER1"]
+margin_right = 440.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 0, 55 )
 value = 100.0
 texture_under = ExtResource( 5 )
 texture_progress = ExtResource( 5 )
@@ -24,10 +37,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ENERGY" type="TextureProgress" parent="."]
-margin_top = 54.0
-margin_right = 300.0
-margin_bottom = 104.0
+[node name="TextureRect2" type="TextureRect" parent="PLAYER1/health_bar2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -33.0
+margin_top = 102.5
+margin_bottom = 134.5
+texture = ExtResource( 8 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ENERGY2" type="TextureProgress" parent="PLAYER1"]
+margin_top = 59.0
+margin_right = 440.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 25 )
 value = 100.0
 texture_under = ExtResource( 4 )
 texture_progress = ExtResource( 4 )
@@ -37,17 +65,145 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LAGTIME" type="TextureProgress" parent="."]
-margin_top = 81.0
-margin_right = 300.0
-margin_bottom = 131.0
+[node name="TextureRect2" type="TextureRect" parent="PLAYER1/ENERGY2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -137.0
+margin_top = 105.5
+margin_right = -115.0
+margin_bottom = 126.5
+texture = ExtResource( 7 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LAGTIME2" type="TextureProgress" parent="PLAYER1"]
+margin_top = 88.0
+margin_right = 440.0
+margin_bottom = 113.0
+rect_min_size = Vector2( 0, 25 )
 max_value = 1.5
 step = 0.0
+value = 1.5
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 3 )
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0.643137, 0, 0.0941176, 1 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="PLAYER1/LAGTIME2"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -136.0
+margin_top = -12.5
+margin_right = -116.0
+margin_bottom = 7.5
+texture = ExtResource( 9 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PLAYER1"]
+margin_top = 117.0
+margin_right = 440.0
+margin_bottom = 117.0
+
+[node name="health_bar" type="TextureProgress" parent="PLAYER1"]
+margin_top = 121.0
+margin_right = 440.0
+margin_bottom = 171.0
+rect_min_size = Vector2( 440, 50 )
+max_value = 50.0
+value = 50.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 5 )
+tint_under = Color( 0, 0, 0, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+parent_path = NodePath("../..")
+
+[node name="TextureRect" type="TextureRect" parent="PLAYER1/health_bar"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -34.0
+margin_top = -138.0
+margin_right = -1.0
+margin_bottom = -106.0
+texture = ExtResource( 8 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ENERGY" type="TextureProgress" parent="PLAYER1"]
+margin_top = 175.0
+margin_right = 440.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 325, 25 )
+value = 100.0
 texture_under = ExtResource( 4 )
 texture_progress = ExtResource( 4 )
 tint_under = Color( 0, 0, 0, 1 )
-tint_progress = Color( 0.662745, 0, 1, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="PLAYER1/ENERGY"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -23.0
+margin_top = -127.5
+margin_right = -1.0
+margin_bottom = -106.5
+texture = ExtResource( 7 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LAGTIME" type="TextureProgress" parent="PLAYER1"]
+margin_top = 204.0
+margin_right = 440.0
+margin_bottom = 229.0
+rect_min_size = Vector2( 325, 25 )
+max_value = 1.5
+step = 0.0
+value = 1.5
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 3 )
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0.643137, 0, 0.0941176, 1 )
 script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="PLAYER1/LAGTIME"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -10.0
+margin_bottom = 10.0
+texture = ExtResource( 9 )
+stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

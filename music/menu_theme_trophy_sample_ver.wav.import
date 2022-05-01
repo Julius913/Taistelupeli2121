@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/menu_theme_trophy_sample_ver.wav-48e9332683d3f18fd6d17ec60467c6ea.sample"
+
+[deps]
+
+source_file="res://music/menu_theme_trophy_sample_ver.wav"
+dest_files=[ "res://.import/menu_theme_trophy_sample_ver.wav-48e9332683d3f18fd6d17ec60467c6ea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
